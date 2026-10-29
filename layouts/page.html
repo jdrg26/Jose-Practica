@@ -1,0 +1,5 @@
+{{ partial "header.html" . }}
+    {{ if .Date }}{{ .Date | time.Format ":date_long" }}{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+{{ partial "footer.html" . }}
