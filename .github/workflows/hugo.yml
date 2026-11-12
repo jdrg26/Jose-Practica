@@ -51,7 +51,7 @@ jobs:
       - name: Generate SQLite data
         run: python3 tools/index.py
 
-       - name: Build with Hugo
+      - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
