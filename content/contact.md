@@ -1,5 +1,5 @@
 ---
-title: Página de contancto
+title: Página de contacto
 ---
 
 
