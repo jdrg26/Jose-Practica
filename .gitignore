@@ -1,2 +1,5 @@
 .hugo_build.lcok
 /public/
+/build/
+/data/tags.json
+/static/search.json

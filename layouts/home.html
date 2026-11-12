@@ -2,4 +2,23 @@
 {{ partial "header.html" . }}
     <h1>{{ .Title }}</h1>
     {{ .Content }}
+<h2>Buscar publicaciones</h2>
+
+<form role="search" onsubmit="return false">
+  <label for="q">Buscar por título, etiquetas o texto:</label>
+  <input id="q" type="search" placeholder="Ejemplo: sql">
+</form>
+
+<ul id="results"
+    data-index="{{ "search.json" | relURL }}"
+    data-base="{{ "" | relURL }}">
+</ul>
+
+<script src="{{ "search.js" | relURL }}" defer></script>
+<h2>Etiquetas</h2>
+<ul>
+  {{ range hugo.Data.tags }}
+    <li>{{ .tag }}: {{ .total }} publicación(es)</li>
+  {{ end }}
+</ul>
 {{ partial "footer.html" . }}
